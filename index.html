@@ -76,10 +76,18 @@ Live Event Test
 
 <div class="video-container">
 
-<iframe
-src="https://player.twitch.tv/?channel=atharrv2459&parent=raw-test-to-go-live-iota.vercel.app&parent=localhost&parent=127.0.0.1"
-allowfullscreen>
-</iframe>
+<div id="twitch-player"></div>
+
+<script src="https://player.twitch.tv/js/embed/v1.js"></script>
+
+<script>
+new Twitch.Player("twitch-player", {
+    width: "100%",
+    height: "500",
+    channel: "atharrv2459",
+    parent: ["raw-test-to-go-live-iota.vercel.app"]
+});
+</script>
 
 </div>
 
