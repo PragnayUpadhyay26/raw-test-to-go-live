@@ -41,16 +41,12 @@ header{
 .video-container{
     position:relative;
     width:100%;
-    padding-bottom:56.25%;
+    height:500px;
 }
 
-.video-container iframe{
-    position:absolute;
-    top:0;
-    left:0;
+#twitch-player{
     width:100%;
     height:100%;
-    border:none;
 }
 
 .info{
@@ -78,17 +74,6 @@ Live Event Test
 
 <div id="twitch-player"></div>
 
-<script src="https://player.twitch.tv/js/embed/v1.js"></script>
-
-<script>
-new Twitch.Player("twitch-player", {
-    width: "100%",
-    height: "500",
-    channel: "atharrv2459",
-    parent: ["raw-test-to-go-live-iota.vercel.app"]
-});
-</script>
-
 </div>
 
 <div class="info">
@@ -96,6 +81,19 @@ Testing live video functionality before deploying to the main website.
 </div>
 
 </div>
+
+<script src="https://player.twitch.tv/js/embed/v1.js"></script>
+
+<script>
+
+new Twitch.Player("twitch-player", {
+    width: "100%",
+    height: "100%",
+    channel: "atharrv2459",
+    parent: ["raw-test-to-go-live-iota.vercel.app"]
+});
+
+</script>
 
 </body>
 
